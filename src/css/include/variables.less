@@ -3,8 +3,9 @@
 @colorLightBlue: #00aeef;
 @colorGray: #f3f3f4;
 @colorWhite: #fff;
-@colorDarkOrange: #ef7600;
-@colorLightOrange: #ff9834;
+@colorOrange: #f8ac59;
+@colorRed: #ed5565;
+@colorGreen: #1ab394;
 
 @colorFontGray: #676a6c;
 @colorBorderGray: #e7eaec;
@@ -26,5 +27,28 @@
         content: '';
         display: block;
         clear: both;
+    }
+}
+
+// btn mixins
+.btn-color(@color, @textColor: #fff) {
+    color: @textColor;
+    background-color: @color;
+    border-color: @color;
+
+    &:hover {
+        background-color: darken(@color, 8%);
+        border-color: @color;
+    }
+}
+
+.btn-disabled(@color, @borderColor, @textColor: #fff) {
+    color: @textColor;
+    background-color: lighten(@color, 8%);
+    border-color: @borderColor;
+
+    &:hover {
+        background-color: lighten(@color, 8%);
+        border-color: @borderColor;
     }
 }

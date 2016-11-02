@@ -96,7 +96,7 @@
                     }
 
                     .new {
-                        background-color: @colorDarkOrange;
+                        background-color: @colorOrange;
                     }
 
                     .new-2 {
@@ -223,7 +223,7 @@
                     }
 
                     .new {
-                        border-left: 5px solid @colorDarkOrange;
+                        border-left: 5px solid @colorOrange;
                     }
 
                     .new-2 {
@@ -280,7 +280,6 @@
     }
 }
 
-
 // page content (main)
 .content {
     min-height: 100vh;
@@ -305,12 +304,16 @@
             height: 30px;
             width: 30px;
             display: inline-block;
-            background-color: @colorLightOrange;
+            background-color: @colorOrange;
             border-radius: 4px;
             margin: 5px 0;
             text-align: center;
             line-height: 30px;
             color: @colorWhite;
+
+            &:active {
+                box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+            }
         }
 
         .searchbar {
@@ -378,4 +381,92 @@
 }
 .compact-menu .content {
     margin-left: 50px;
+}
+
+// buttons
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: @colorWhite;
+    color: @colorFontGray;
+    border: 1px solid @colorBorderGray;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background-color: #e6e6e6;
+        border-color: #d2d2d2;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    }
+
+    & + .btn {
+        margin-left: 5px;
+    }
+
+    &.btn-block {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    &.btn-primary {
+        .btn-color(@colorDarkBlue);
+    }
+
+    &.btn-success {
+        .btn-color(@colorGreen);
+    }
+
+    &.btn-info {
+        .btn-color(@colorLightBlue);
+    }
+
+    &.btn-warning {
+        .btn-color(@colorOrange);
+    }
+
+    &.btn-error,
+    &.btn-danger {
+        .btn-color(@colorRed);
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        &.btn-default {
+            .btn-disabled(@colorWhite, @colorBorderGray, @colorFontGray);
+        }
+
+        &.btn-primary {
+            .btn-disabled(@colorDarkBlue, @colorDarkBlue);
+        }
+
+        &.btn-success {
+            .btn-disabled(@colorGreen, @colorGreen);
+        }
+
+        &.btn-info {
+            .btn-disabled(@colorLightBlue, @colorLightBlue);
+        }
+
+        &.btn-warning {
+            .btn-disabled(@colorOrange, @colorOrange);
+        }
+
+        &.btn-error,
+        &.btn-danger {
+            .btn-disabled(@colorRed, @colorRed);
+        }
+    }
 }
