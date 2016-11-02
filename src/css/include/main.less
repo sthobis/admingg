@@ -27,6 +27,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1005;
 
     .profile {
         background-color: @colorLightBlue;
@@ -53,7 +54,7 @@
 
                 &:hover {
                     
-                    a {
+                    & > a {
                         background-color: darken(@colorDarkBlue, 5%);
                         color: @colorWhite;
                     }
@@ -61,7 +62,7 @@
 
                 &.active {
 
-                    a {
+                    & > a {
                         background-color: darken(@colorDarkBlue, 5%);
                         color: @colorWhite;
                     }
@@ -159,6 +160,104 @@
         }
     }
 }
+.compact-menu .sidebar {
+    width: 50px;
+
+    .profile {
+        background-size: 75%;
+        background-position: center;
+        height: 50px;
+        padding: 0;
+
+        * {
+            display: none;
+        }
+    }
+
+    .menu {
+
+        ul {
+
+            li {
+
+                a {
+                    padding: 0;
+                    text-align: center;
+                    position: relative;
+
+                    .fa {
+                        margin: 0;
+                    }
+
+                    .text {
+                        display: none;
+                    }
+
+                    .new,
+                    .new-2 {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        display: block;
+                        width: 0;
+                        height: 100%;
+                        padding: 0;
+                        font-size: 0;
+                        border-radius: 0;
+                    }
+
+                    .new {
+                        border-left: 5px solid @colorDarkOrange;
+                    }
+
+                    .new-2 {
+                        border-left: 5px solid @colorLightBlue;
+                    }
+
+                    &.toggle {
+                        display: none;
+                    }
+                }
+
+                &.open {
+
+                    .submenu {
+                        display: block !important;
+                        position: absolute;
+                        top: 0;
+                        left: 100%;
+                        height: auto;
+                        width: auto;
+
+                        li {
+
+                            &:hover {
+
+                                a {
+                                    background-color: darken(@colorDarkBlue, 5%);
+                                }
+                            }
+
+                            a {
+                                background-color: @colorDarkBlue;
+                                padding: 0 10px;
+                                width: auto;
+                                text-align: left;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: none;
+    }
+}
+
 
 // page content (main)
 .content {
@@ -254,4 +353,7 @@
         line-height: 40px;
         .clearfix();
     }
+}
+.compact-menu .content {
+    margin-left: 50px;
 }

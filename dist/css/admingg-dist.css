@@ -46,6 +46,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1005;
 }
 .sidebar .profile {
   background-color: #00aeef;
@@ -66,11 +67,11 @@ p {
 .sidebar .menu ul li {
   position: relative;
 }
-.sidebar .menu ul li:hover a {
+.sidebar .menu ul li:hover > a {
   background-color: #125497;
   color: #ffffff;
 }
-.sidebar .menu ul li.active a {
+.sidebar .menu ul li.active > a {
   background-color: #125497;
   color: #ffffff;
 }
@@ -142,6 +143,72 @@ p {
   right: 30%;
   border-bottom: 1px dashed #ffffff;
   opacity: .5;
+}
+.compact-menu .sidebar {
+  width: 50px;
+}
+.compact-menu .sidebar .profile {
+  background-size: 75%;
+  background-position: center;
+  height: 50px;
+  padding: 0;
+}
+.compact-menu .sidebar .profile * {
+  display: none;
+}
+.compact-menu .sidebar .menu ul li a {
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.compact-menu .sidebar .menu ul li a .fa {
+  margin: 0;
+}
+.compact-menu .sidebar .menu ul li a .text {
+  display: none;
+}
+.compact-menu .sidebar .menu ul li a .new,
+.compact-menu .sidebar .menu ul li a .new-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  padding: 0;
+  font-size: 0;
+  border-radius: 0;
+}
+.compact-menu .sidebar .menu ul li a .new {
+  border-left: 5px solid #ef7600;
+}
+.compact-menu .sidebar .menu ul li a .new-2 {
+  border-left: 5px solid #00aeef;
+}
+.compact-menu .sidebar .menu ul li a.toggle {
+  display: none;
+}
+.compact-menu .sidebar .menu ul li.open .submenu {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: auto;
+  width: auto;
+}
+.compact-menu .sidebar .menu ul li.open .submenu li:hover a {
+  background-color: #125497;
+}
+.compact-menu .sidebar .menu ul li.open .submenu li a {
+  background-color: #1561ae;
+  padding: 0 10px;
+  width: auto;
+  text-align: left;
+  white-space: nowrap;
+}
+.compact-menu .sidebar .footer {
+  display: none;
 }
 .content {
   min-height: 100vh;
@@ -234,5 +301,8 @@ p {
   content: '';
   display: block;
   clear: both;
+}
+.compact-menu .content {
+  margin-left: 50px;
 }
 /* ==========  Responsive  ========== */
