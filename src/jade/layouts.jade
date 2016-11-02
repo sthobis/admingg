@@ -1,0 +1,33 @@
+//- layouts.jade
+- var title = "AdminGG by AkoMid"
+- var page = "layouts"
+
+doctype html
+html
+
+    // head
+    head
+        include ./include/head.jade
+
+    // body
+    body
+
+        .admingg
+
+            // sidebar
+            include ./include/sidebar.jade
+
+            .content
+
+                // header
+                include ./include/header.jade
+
+                // main content
+                div(role="main")
+                    h1 Layouts Content
+
+                // footer
+                include ./include/footer.jade
+
+        // script
+        include ./include/script.jade

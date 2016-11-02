@@ -1,0 +1,257 @@
+// variables and mixins
+@import "./variables";
+
+// wrapper
+.admingg {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: @colorDarkBlue;
+
+    .sticky-left {
+        float: left;
+        text-align: left;
+        display: inline-block;
+    }
+
+    .sticky-right {
+        float: right;
+        text-align: right;
+        display: inline-block;
+    }
+}
+
+// page sidebar (menu)
+.sidebar {
+    width: 240px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .profile {
+        background-color: @colorLightBlue;
+        background-image: url('../img/logo-small.png');
+        background-position: top 20px center;
+        background-repeat: no-repeat;
+        height: 130px;
+        padding: 70px 0 0 0;
+        color: @colorWhite;
+        text-align: center;
+
+        h1 {
+            margin: 0;
+        }
+    }
+
+    .menu {
+
+        ul {
+            padding: 0;
+
+            li {
+                position: relative;
+
+                &:hover {
+                    
+                    a {
+                        background-color: darken(@colorDarkBlue, 5%);
+                        color: @colorWhite;
+                    }
+                }
+
+                &.active {
+
+                    a {
+                        background-color: darken(@colorDarkBlue, 5%);
+                        color: @colorWhite;
+                    }
+                }
+
+                a {
+                    display: block;
+                    height: 40px;
+                    padding: 0 40px 0 20px;
+                    line-height: 40px;
+                    color: #d0d0d0;
+                    font-weight: @semibold;
+
+
+                    .fa {
+                        margin-right: 10px;
+                    }
+
+                    .new,
+                    .new-2 {
+                        display: inline-block;
+                        height: 20px;
+                        padding: 0 8px;
+                        margin: 0 0 0 12px;
+                        border-radius: 7px;
+                        color: @colorWhite;
+                        line-height: 19px;
+                    }
+
+                    .new {
+                        background-color: @colorDarkOrange;
+                    }
+
+                    .new-2 {
+                        background-color: @colorLightBlue;   
+                    }
+
+                    &.toggle {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 40px;
+                        padding: 0;
+                        text-align: center;
+
+                        .fa {
+                            margin: 0;
+                            transition: all .3s;
+                        }
+                    }
+                }
+
+                // submenu opened (toggle clicked)
+                &.open {
+
+                    .toggle {
+
+                        .fa {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+
+            &.submenu {
+                display: none;
+
+                li {
+
+                    a {
+                        padding-left: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        color: @colorWhite;
+        font-size: 11px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 30%;
+            right: 30%;
+            border-bottom: 1px dashed @colorWhite;
+            opacity: .5;
+        }
+    }
+}
+
+// page content (main)
+.content {
+    min-height: 100vh;
+    margin: 0 0 0 240px;
+    padding: 61px 0 41px 0;
+    background-color: @colorWhite;
+    position: relative;
+
+    .content-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 61px;
+        padding: 10px 20px;
+        background-color: @colorGray;
+        border-bottom: 1px solid @colorBorderGray;
+        .clearfix();
+
+        .menu-toggle {
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            background-color: @colorLightOrange;
+            border-radius: 4px;
+            margin: 5px 0;
+            text-align: center;
+            line-height: 30px;
+            color: @colorWhite;
+        }
+
+        .searchbar {
+            display: inline-block;
+            margin-left: 20px;
+
+            input {
+                height: 40px;
+                width: 300px;
+                display: inline-block;
+                border: none;
+                background-color: transparent;
+                font-size: 15px;
+                margin: 0 0 0 5px;
+                color: @colorFontGray;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .notification {
+            display: inline-block;
+            height: 40px;
+            margin: 0 0 0 20px;
+            line-height: 40px;
+            color: @colorFontGray;
+        }
+
+        .logout {
+            display: inline-block;
+            height: 40px;
+            margin: 0 0 0 20px;
+            line-height: 40px;
+            font-size: 14px;
+            color: @colorFontGray;
+
+            p {
+                display: inline-block;
+                font-weight: @semibold;
+                margin: 0;
+            }
+        }
+    }
+
+    div[role="main"] {
+        background-color: @colorWhite;
+        padding: 20px;
+    }
+
+    .content-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 41px;
+        padding: 0 20px;
+        background-color: @colorGray;
+        border-top: 1px solid @colorBorderGray;
+        line-height: 40px;
+        .clearfix();
+    }
+}

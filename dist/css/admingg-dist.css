@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #676a6c;
+  font-size: 13px;
+  font-family: 'Open Sans', sans-serif;
+}
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  margin: 0 0 20px 0;
+}
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 0 15px 0;
+}
+.admingg {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #1561ae;
+}
+.admingg .sticky-left {
+  float: left;
+  text-align: left;
+  display: inline-block;
+}
+.admingg .sticky-right {
+  float: right;
+  text-align: right;
+  display: inline-block;
+}
+.sidebar {
+  width: 240px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.sidebar .profile {
+  background-color: #00aeef;
+  background-image: url('../img/logo-small.png');
+  background-position: top 20px center;
+  background-repeat: no-repeat;
+  height: 130px;
+  padding: 70px 0 0 0;
+  color: #ffffff;
+  text-align: center;
+}
+.sidebar .profile h1 {
+  margin: 0;
+}
+.sidebar .menu ul {
+  padding: 0;
+}
+.sidebar .menu ul li {
+  position: relative;
+}
+.sidebar .menu ul li:hover a {
+  background-color: #125497;
+  color: #ffffff;
+}
+.sidebar .menu ul li.active a {
+  background-color: #125497;
+  color: #ffffff;
+}
+.sidebar .menu ul li a {
+  display: block;
+  height: 40px;
+  padding: 0 40px 0 20px;
+  line-height: 40px;
+  color: #d0d0d0;
+  font-weight: 600;
+}
+.sidebar .menu ul li a .fa {
+  margin-right: 10px;
+}
+.sidebar .menu ul li a .new,
+.sidebar .menu ul li a .new-2 {
+  display: inline-block;
+  height: 20px;
+  padding: 0 8px;
+  margin: 0 0 0 12px;
+  border-radius: 7px;
+  color: #ffffff;
+  line-height: 19px;
+}
+.sidebar .menu ul li a .new {
+  background-color: #ef7600;
+}
+.sidebar .menu ul li a .new-2 {
+  background-color: #00aeef;
+}
+.sidebar .menu ul li a.toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  padding: 0;
+  text-align: center;
+}
+.sidebar .menu ul li a.toggle .fa {
+  margin: 0;
+  -webkit-transition: all .3s;
+          transition: all .3s;
+}
+.sidebar .menu ul li.open .toggle .fa {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.sidebar .menu ul.submenu {
+  display: none;
+}
+.sidebar .menu ul.submenu li a {
+  padding-left: 45px;
+}
+.sidebar .footer {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 11px;
+}
+.sidebar .footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 30%;
+  right: 30%;
+  border-bottom: 1px dashed #ffffff;
+  opacity: .5;
+}
+.content {
+  min-height: 100vh;
+  margin: 0 0 0 240px;
+  padding: 61px 0 41px 0;
+  background-color: #ffffff;
+  position: relative;
+}
+.content .content-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 61px;
+  padding: 10px 20px;
+  background-color: #f3f3f4;
+  border-bottom: 1px solid #e7eaec;
+}
+.content .content-header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.content .content-header .menu-toggle {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-color: #ff9834;
+  border-radius: 4px;
+  margin: 5px 0;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+}
+.content .content-header .searchbar {
+  display: inline-block;
+  margin-left: 20px;
+}
+.content .content-header .searchbar input {
+  height: 40px;
+  width: 300px;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  margin: 0 0 0 5px;
+  color: #676a6c;
+}
+.content .content-header .searchbar input:focus {
+  outline: none;
+}
+.content .content-header .notification {
+  display: inline-block;
+  height: 40px;
+  margin: 0 0 0 20px;
+  line-height: 40px;
+  color: #676a6c;
+}
+.content .content-header .logout {
+  display: inline-block;
+  height: 40px;
+  margin: 0 0 0 20px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #676a6c;
+}
+.content .content-header .logout p {
+  display: inline-block;
+  font-weight: 600;
+  margin: 0;
+}
+.content div[role="main"] {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.content .content-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 41px;
+  padding: 0 20px;
+  background-color: #f3f3f4;
+  border-top: 1px solid #e7eaec;
+  line-height: 40px;
+}
+.content .content-footer::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* ==========  Responsive  ========== */

@@ -1,0 +1,1 @@
+!function(n){"use strict";function t(){e()}function e(){n(document).on("click",".sidebar .menu .toggle",function(t){t.preventDefault(),n(this).parent().toggleClass("open"),n(this).siblings(".submenu").stop().slideToggle()})}n(document).ready(function(){t()})}(jQuery);

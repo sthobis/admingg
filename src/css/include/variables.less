@@ -1,0 +1,30 @@
+// colors
+@colorDarkBlue: #1561ae;
+@colorLightBlue: #00aeef;
+@colorGray: #f3f3f4;
+@colorWhite: #fff;
+@colorDarkOrange: #ef7600;
+@colorLightOrange: #ff9834;
+
+@colorFontGray: #676a6c;
+@colorBorderGray: #e7eaec;
+
+// font weight
+@regular: 400;
+@semibold: 600;
+@bold: 700;
+
+// fonts
+.fontOpenSans() {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// clearing float
+.clearfix() {
+
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
