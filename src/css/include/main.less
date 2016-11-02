@@ -69,27 +69,30 @@
                 }
 
                 a {
+                    position: relative;
                     display: block;
                     height: 40px;
-                    padding: 0 40px 0 20px;
-                    line-height: 40px;
                     color: #d0d0d0;
                     font-weight: @semibold;
 
-
                     .fa {
-                        margin-right: 10px;
+                        display: block;
+                        width: 50px;
+                        height: 100%;
+                        text-align: center;
+                        line-height: 40px;
                     }
 
                     .new,
                     .new-2 {
                         display: inline-block;
-                        height: 20px;
+                        vertical-align: middle;
+                        height: 17px;
                         padding: 0 8px;
                         margin: 0 0 0 12px;
                         border-radius: 7px;
                         color: @colorWhite;
-                        line-height: 19px;
+                        line-height: 17px;
                     }
 
                     .new {
@@ -100,6 +103,16 @@
                         background-color: @colorLightBlue;   
                     }
 
+                    .text {
+                        position: absolute;
+                        left: 50px;
+                        right: 40px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        vertical-align: top;
+                        line-height: 17px;
+                    }
+
                     &.toggle {
                         position: absolute;
                         top: 0;
@@ -108,10 +121,12 @@
                         width: 40px;
                         padding: 0;
                         text-align: center;
+                        line-height: 40px;
 
                         .fa {
                             margin: 0;
                             transition: all .3s;
+                            width: 40px;
                         }
                     }
                 }
@@ -245,6 +260,13 @@
                                 width: auto;
                                 text-align: left;
                                 white-space: nowrap;
+
+                                .text {
+                                    position: static;
+                                    transform: none;
+                                    display: block;
+                                    line-height: 40px;
+                                }
                             }
                         }
                     }
