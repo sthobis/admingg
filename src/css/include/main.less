@@ -285,7 +285,7 @@
     min-height: 100vh;
     margin: 0 0 0 240px;
     padding: 61px 0 41px 0;
-    background-color: @colorWhite;
+    background-color: @colorGray;
     position: relative;
 
     .content-header {
@@ -305,7 +305,7 @@
             width: 30px;
             display: inline-block;
             background-color: @colorOrange;
-            border-radius: 4px;
+            border-radius: 3px;
             margin: 5px 0;
             text-align: center;
             line-height: 30px;
@@ -361,8 +361,7 @@
     }
 
     div[role="main"] {
-        background-color: @colorWhite;
-        padding: 20px;
+        padding: 0 20px;
     }
 
     .content-footer {
@@ -383,6 +382,94 @@
     margin-left: 50px;
 }
 
+// layouts
+.section-header {
+    background-color: @colorWhite;
+    padding: 20px;
+    margin: 0 -20px 15px -20px;
+    border-bottom: 1px solid @colorBorderGray;
+
+    .title {
+        margin: 0;
+        font-weight: @thin;
+        font-size: 2em;
+    }
+}
+
+.container {
+    background-color: @colorWhite;
+    padding: 15px;
+    margin: 0 0 15px 0;
+}
+
+.column-2 {
+    .clearfix;
+
+    .container {
+        width: ~"calc((100% / 2) - (20px / 2))";
+        float: left;
+
+        & + .container {
+            margin-left: 20px;
+        }
+    }
+
+    &.float-right {
+
+        .container {
+            float: right;
+        }
+    }
+}
+
+.column-3 {
+    .clearfix;
+
+    .container {
+        width: ~"calc((100% / 3) - (40px / 3))";
+        float: left;
+
+        & + .container {
+            margin-left: 20px;
+        }
+    }
+
+    &.float-right {
+
+        .container {
+            float: right;
+        }
+    }
+}
+
+.column-4 {
+    .clearfix;
+
+    .container {
+        width: ~"calc((100% / 4) - (60px / 4))";
+        float: left;
+
+        & + .container {
+            margin-left: 20px;
+        }
+    }
+
+    &.float-right {
+
+        .container {
+            float: right;
+        }
+    }
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: right;
+}
+
 // buttons
 .btn {
     display: inline-block;
@@ -396,6 +483,7 @@
     white-space: nowrap;
     cursor: pointer;
     user-select: none;
+    margin: 0 0 10px 0;
 
     &:hover {
         background-color: #e6e6e6;
