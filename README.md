@@ -19,3 +19,7 @@ Administration Dashboard Template
    `Jade to HTML, LESS to CSS, autoprefix, JS uglify`
 3. Done
 
+# To do
+- [ ] Media Queries
+- [ ] Subtle Animation
+- [ ] Form Validation
