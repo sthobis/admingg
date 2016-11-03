@@ -10,7 +10,11 @@ body {
 }
 ul {
   margin: 0;
-  list-style-type: none;
+  padding: 0 0 0 20px;
+}
+ol {
+  margin: 0;
+  padding: 0 0 0 20px;
 }
 a {
   text-decoration: none;
@@ -86,6 +90,7 @@ hr {
 }
 .sidebar .menu ul {
   padding: 0;
+  list-style-type: none;
 }
 .sidebar .menu ul li {
   position: relative;
@@ -698,5 +703,76 @@ hr {
   background-color: #ffffff;
   border: 1px solid #dedede;
   border-radius: 3px;
+}
+.list-square {
+  list-style-type: none;
+}
+.list-square li {
+  position: relative;
+  line-height: 18px;
+}
+.list-square li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: -15px;
+  top: 6px;
+  background-color: #1561ae;
+}
+.list-square ul {
+  list-style-type: none;
+}
+.list-alpha {
+  list-style-type: upper-alpha;
+}
+.list-alpha ol {
+  list-style-type: lower-alpha;
+}
+.list-roman {
+  list-style-type: upper-roman;
+}
+.list-roman ol {
+  list-style-type: lower-roman;
+}
+.list-horizontal-1,
+.list-horizontal-2 {
+  list-style-type: none;
+  padding: 0;
+}
+.list-horizontal-1 li,
+.list-horizontal-2 li {
+  display: inline-block;
+  float: left;
+}
+.list-horizontal-1 li + li,
+.list-horizontal-2 li + li {
+  position: relative;
+}
+.list-horizontal-1 li + li {
+  margin-left: 15px;
+}
+.list-horizontal-1 li + li::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: -8px;
+  border-right: 1px solid #676a6c;
+}
+.list-horizontal-2 li + li {
+  margin-left: 20px;
+}
+.list-horizontal-2 li + li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  display: block;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  background-color: #1561ae;
 }
 /* ==========  Responsive  ========== */
