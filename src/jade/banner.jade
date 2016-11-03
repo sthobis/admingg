@@ -24,7 +24,31 @@ html
 
                 // main content
                 div(role="main")
-                    h1 Banner Content
+                    .section-header
+                        h1.title Banner
+                        p.description Usage example of banner
+
+                    h1 Using Image
+                    .banner-wrap
+                        img(src="img/harbour.jpeg" alt="Harbour")
+
+                    h1 Using Background Property
+                    .banner-wrap(style="background-image:url('img/harbour.jpeg')")
+
+                    h1 With Overlay
+                    .banner-wrap.overlay-default
+                        img(src="img/harbour.jpeg" alt="Harbour")
+                    .banner-wrap.overlay-blue
+                        img(src="img/harbour.jpeg" alt="Harbour")
+                    .banner-wrap.overlay-orange
+                        img(src="img/harbour.jpeg" alt="Harbour")
+
+                    h1 With Title and Description
+                    .banner-wrap.overlay-default
+                        img(src="img/harbour.jpeg" alt="Harbour")
+                        .text
+                            h1 Insert Title Here
+                            p Insert Detailed and Self-Explanatory Description Here           
 
                 // footer
                 include ./include/footer.jade

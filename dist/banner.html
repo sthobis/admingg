@@ -69,7 +69,25 @@
         </header>
         <!-- main content-->
         <div role="main">
-          <h1>Banner Content</h1>
+          <div class="section-header">
+            <h1 class="title">Banner</h1>
+            <p class="description">Usage example of banner</p>
+          </div>
+          <h1>Using Image</h1>
+          <div class="banner-wrap"><img src="img/harbour.jpeg" alt="Harbour"></div>
+          <h1>Using Background Property</h1>
+          <div style="background-image:url('img/harbour.jpeg')" class="banner-wrap"></div>
+          <h1>With Overlay</h1>
+          <div class="banner-wrap overlay-default"><img src="img/harbour.jpeg" alt="Harbour"></div>
+          <div class="banner-wrap overlay-blue"><img src="img/harbour.jpeg" alt="Harbour"></div>
+          <div class="banner-wrap overlay-orange"><img src="img/harbour.jpeg" alt="Harbour"></div>
+          <h1>With Title and Description</h1>
+          <div class="banner-wrap overlay-default"><img src="img/harbour.jpeg" alt="Harbour">
+            <div class="text">
+              <h1>Insert Title Here</h1>
+              <p>Insert Detailed and Self-Explanatory Description Here           </p>
+            </div>
+          </div>
         </div>
         <!-- footer-->
         <footer class="content-footer">
