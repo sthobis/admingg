@@ -7,6 +7,7 @@
     function initAdminGG() {
         initSidebarMenu();
         initSliderDemo();
+        initSelect2();
     }
 
     /*
@@ -48,13 +49,15 @@
     }
 
     /*
-     * slider demo initialization
+     * sliders initialization
      */
      function initSliderDemo() {
 
+        // DEMO - can be erased
         // Single Item
         $('.slider-demo-1').slick();
 
+        // DEMO - can be erased
         // Multiple Item
         $('.slider-demo-2').slick({
             slidesToShow: 3,
@@ -62,6 +65,7 @@
             infinite: false
         });
 
+        // DEMO - can be erased
         // Responsive Display
         $('.slider-demo-3').slick({
             dots: true,
@@ -92,6 +96,7 @@
             ]
         });
 
+        // DEMO - can be erased
         // Slider syncing + Autoplay
         $('.slider-demo-4-1').slick({
             slidesToShow: 1,
@@ -109,6 +114,16 @@
             arrows: false,
             autoplay: true,
             autoplaySpeed: 2000
+        });
+     }
+
+    /*
+     * dropdown initialization
+     */
+     function initSelect2() {
+
+        $('.dropdown-select').each(function() {
+            $(this).select2();
         });
      }
 

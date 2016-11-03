@@ -24,8 +24,51 @@ html
 
                 // main content
                 div(role="main")
-                    h1 Dropdown Content
+                    .section-header
+                        h1.title Dropdowns
+                        p.description Usage example of dropdowns
 
+                    .container
+                        h1 Normal Dropdown
+                        select(name="select1").dropdown-select
+                            option Option 1
+                            option Option 2
+                            option Option 3
+                            option Option 4
+                            option Option 5
+
+                    .container
+                        h1 Multiple Dropdown
+                        select(name="select1" multiple="multiple").dropdown-select
+                            option Option 1
+                            option Option 2
+                            option Option 3
+                            option Option 4
+                            option Option 5
+
+                    .column-2
+                        .container
+                            h1 Disabled Dropdown
+                            select.dropdown-select(disabled)
+                                option Option 1
+                                option Option 2
+                                option Option 3
+                                option Option 4
+                                option Option 5
+                        .container
+                            h1 Disabled Option
+                            select.dropdown-select
+                                option Option 1
+                                option(disabled="disabled") Option 2 (disabled)
+                                option Option 3
+                                option Option 4
+                                option Option 5
+
+                    .container
+                        p adminGG used Select2 plugin for dropdown.
+                        p More customization options can be found on 
+                            a(href="https://select2.github.io/") their site
+                            | .
                 // footer
                 include ./include/footer.jade
 
