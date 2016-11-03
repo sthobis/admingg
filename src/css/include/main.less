@@ -394,6 +394,10 @@
         font-weight: @thin;
         font-size: 2em;
     }
+
+    .description {
+        margin: 5px 0 0 0;
+    }
 }
 
 .container {
@@ -555,6 +559,54 @@
         &.btn-error,
         &.btn-danger {
             .btn-disabled(@colorRed, @colorRed);
+        }
+    }
+}
+
+// sliders
+.slick-prev {
+    left: 10px;
+    z-index: 10;
+}
+.slick-next {
+    right: 10px;
+    z-index: 10;
+}
+.slick-dots {
+    bottom: 5%;
+
+    li {
+        margin: 4px;
+        width: 12px;
+        height: 12px;
+
+        button {
+            background-color: @colorWhite;
+            width: 12px;
+            height: 12px;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.slick-active {
+
+            button {
+                position: relative;
+                background-color: @colorLightBlue;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    display: block;
+                    width: 9px;
+                    height: 9px;
+                    background-color: @colorLightBlue;
+                }
+            }
         }
     }
 }

@@ -6,6 +6,7 @@
      */
     function initAdminGG() {
         initSidebarMenu();
+        initSliderDemo();
     }
 
     /*
@@ -45,6 +46,71 @@
             });
         });
     }
+
+    /*
+     * slider demo initialization
+     */
+     function initSliderDemo() {
+
+        // Single Item
+        $('.slider-demo-1').slick();
+
+        // Multiple Item
+        $('.slider-demo-2').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false
+        });
+
+        // Responsive Display
+        $('.slider-demo-3').slick({
+            dots: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        // Slider syncing + Autoplay
+        $('.slider-demo-4-1').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.slider-demo-4-2',
+            fade: true
+        });
+
+        $('.slider-demo-4-2').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.slider-demo-4-1',
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
+     }
 
     /*
      * on document ready

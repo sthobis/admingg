@@ -350,6 +350,9 @@ hr {
   font-weight: 300;
   font-size: 2em;
 }
+.section-header .description {
+  margin: 5px 0 0 0;
+}
 .container {
   background-color: #ffffff;
   padding: 15px;
@@ -549,5 +552,43 @@ hr {
 .btn[disabled].btn-danger:hover {
   background-color: #f17a86;
   border-color: #ed5565;
+}
+.slick-prev {
+  left: 10px;
+  z-index: 10;
+}
+.slick-next {
+  right: 10px;
+  z-index: 10;
+}
+.slick-dots {
+  bottom: 5%;
+}
+.slick-dots li {
+  margin: 4px;
+  width: 12px;
+  height: 12px;
+}
+.slick-dots li button {
+  background-color: #ffffff;
+  width: 12px;
+  height: 12px;
+}
+.slick-dots li button::before {
+  display: none;
+}
+.slick-dots li.slick-active button {
+  position: relative;
+  background-color: #00aeef;
+}
+.slick-dots li.slick-active button::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #00aeef;
 }
 /* ==========  Responsive  ========== */

@@ -8,6 +8,8 @@ html
     // head
     head
         include ./include/head.jade
+        // for demo purposes
+        link(rel="stylesheet" href="css/slider-demo.css")
 
     // body
     body
@@ -24,7 +26,86 @@ html
 
                 // main content
                 div(role="main")
-                    h1 Slider Content
+                    .section-header
+                        h1.title Sliders
+                        p.description Usage example of sliders
+
+                    .container
+                        h1 Single Item
+                        .slider-demo-1
+                            .slide-demo
+                                h1 Slide 1
+                            .slide-demo
+                                h1 Slide 2
+                            .slide-demo
+                                h1 Slide 3
+
+                    .container
+                        h1 Multiple Item
+                        .slider-demo-2
+                            .slide-demo
+                                h1 Slide 1
+                            .slide-demo
+                                h1 Slide 2
+                            .slide-demo
+                                h1 Slide 3
+                            .slide-demo
+                                h1 Slide 4
+                            .slide-demo
+                                h1 Slide 5
+                            .slide-demo
+                                h1 Slide 6
+                            .slide-demo
+                                h1 Slide 7
+                            .slide-demo
+                                h1 Slide 8
+                            .slide-demo
+                                h1 Slide 9
+
+                    .container
+                        h1 Responsive Display
+                        .slider-demo-3
+                            .slide-demo
+                                h1 Slide 1
+                            .slide-demo
+                                h1 Slide 2
+                            .slide-demo
+                                h1 Slide 3
+                            .slide-demo
+                                h1 Slide 4
+                            .slide-demo
+                                h1 Slide 5
+                            .slide-demo
+                                h1 Slide 6
+                            .slide-demo
+                                h1 Slide 7
+                            .slide-demo
+                                h1 Slide 8
+
+                    .container
+                        h1 Slider Syncing + Autoplay
+                        .slider-demo-4-1
+                            .slide-demo
+                                h1 Slide 1
+                            .slide-demo
+                                h1 Slide 2
+                            .slide-demo
+                                h1 Slide 3
+                            .slide-demo
+                                h1 Slide 4
+                            .slide-demo
+                                h1 Slide 5
+                        .slider-demo-4-2
+                            .slide-demo
+                                h1 Slide 1
+                            .slide-demo
+                                h1 Slide 2
+                            .slide-demo
+                                h1 Slide 3
+                            .slide-demo
+                                h1 Slide 4
+                            .slide-demo
+                                h1 Slide 5
 
                 // footer
                 include ./include/footer.jade
