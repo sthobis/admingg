@@ -32,27 +32,21 @@
         <div class="menu">
           <ul>
             <li><a href="index.html"><span title="Dashboard" class="fa fa-gear"></span><span class="text">Dashboard</span></a></li>
-            <li><a href="layouts.html"><span title="Layouts" class="fa fa-align-left"></span><span class="text">Layouts</span></a><a href="#" class="toggle"><span class="fa fa-angle-double-left"></span></a>
+            <li><a href="layouts.html"><span title="Layouts" class="fa fa-align-left"></span><span class="text">Layouts</span></a></li>
+            <li><a href="button.html"><span title="Buttons" class="fa fa-th"></span><span class="text">Buttons</span></a></li>
+            <li><a href="navigation.html"><span title="Linking" class="fa fa-send"></span><span class="text">Linking</span></a><a href="#" class="toggle"><span class="fa fa-angle-double-left"></span></a>
               <ul class="submenu">
-                <li><a href="#"><span class="text">Layouts 1</span></a></li>
-                <li><a href="#"><span class="text">Layouts 2</span></a></li>
-                <li><a href="#"><span class="text">Layouts 3</span></a></li>
+                <li><a href="navigation.html#section-1"><span class="text">Linking 1</span></a></li>
+                <li><a href="navigation.html#section-2"><span class="text">Linking 2</span></a></li>
+                <li><a href="navigation.html#section-3"><span class="text">Linking 3</span></a></li>
               </ul>
             </li>
-            <li><a href="button.html"><span title="Buttons" class="fa fa-th"></span><span class="text">Buttons<span class="new">5</span></span></a></li>
-            <li><a href="navigation.html"><span title="Navigation" class="fa fa-send"></span><span class="text">Navigation</span></a></li>
-            <li><a href="dropdown.html"><span title="Dropdown" class="fa fa-chevron-circle-down"></span><span class="text">Dropdown</span></a><a href="#" class="toggle"><span class="fa fa-angle-double-left"></span></a>
-              <ul class="submenu">
-                <li><a href="#"><span class="text">Dropdown 1</span></a></li>
-                <li><a href="#"><span class="text">Dropdown 2</span></a></li>
-                <li><a href="#"><span class="text">Dropdown 3</span></a></li>
-              </ul>
-            </li>
+            <li><a href="dropdown.html"><span title="Dropdown" class="fa fa-chevron-circle-down"></span><span class="text">Dropdown</span></a></li>
             <li class="active"><a href="forms.html"><span title="Forms" class="fa fa-file-text"></span><span class="text">Forms</span></a></li>
-            <li><a href="banner.html"><span title="Banner" class="fa fa-flag"></span><span class="text">Banner<span class="new-2">4</span></span></a></li>
+            <li><a href="banner.html"><span title="Banner" class="fa fa-flag"></span><span class="text">Banner</span></a></li>
             <li><a href="list.html"><span title="List" class="fa fa-list-ul"></span><span class="text">List</span></a></li>
             <li><a href="typography.html"><span title="Typography" class="fa fa-font"></span><span class="text">Typography</span></a></li>
-            <li><a href="accordion.html"><span title="Accordion" class="fa fa-bookmark"></span><span class="text">Accordion</span></a></li>
+            <li><a href="accordion.html"><span title="Accordion" class="fa fa-bookmark"></span><span class="text">Accordion<span class="new">NEW</span></span></a></li>
             <li><a href="slider.html"><span title="Slider" class="fa fa-toggle-on"></span><span class="text">Slider</span></a></li>
           </ul>
         </div>
@@ -71,7 +65,86 @@
         </header>
         <!-- main content-->
         <div role="main">
-          <h1>Forms Content</h1>
+          <div class="section-header">
+            <h1 class="title">Forms</h1>
+            <p class="description">Usage example of forms</p>
+          </div>
+          <div class="container">
+            <form class="forms">
+              <h2>Purchasing Order</h2>
+              <div class="form-section">Personal Information</div>
+              <div class="form-field">
+                <label>Full Name
+                  <input type="text">
+                </label>
+              </div>
+              <div class="form-field">
+                <label>Address
+                  <input type="text">
+                </label>
+              </div>
+              <div class="form-field">
+                <label>Birthdate
+                  <input type="text">
+                </label>
+              </div>
+              <div class="form-field">
+                <label>Gender
+                  <select class="dropdown-select">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-section">Order Information</div>
+              <div class="form-field checkbox">
+                <p class="description">Check if you would like to include some options</p>
+                <label>Include Insurance
+                  <input type="checkbox" checked>
+                </label>
+                <label>Bonus Pack
+                  <input type="checkbox">
+                </label>
+              </div>
+              <div class="form-field checkbox block">
+                <p class="description">Check if you would like to include some options</p>
+                <label>Include Insurance
+                  <input type="checkbox" checked>
+                </label>
+                <label>Bonus Pack
+                  <input type="checkbox">
+                </label>
+              </div>
+              <div class="form-field radio">
+                <p class="description">Payment methods</p>
+                <label>Credit Card
+                  <input type="radio" name="payment-1" checked>
+                </label>
+                <label>Bank Transfer
+                  <input type="radio" name="payment-1">
+                </label>
+                <label>Cash on Delivery
+                  <input type="radio" name="payment-1">
+                </label>
+              </div>
+              <div class="form-field radio block">
+                <p class="description">Payment methods</p>
+                <label>Credit Card
+                  <input type="radio" name="payment-2" checked>
+                </label>
+                <label>Bank Transfer
+                  <input type="radio" name="payment-2">
+                </label>
+                <label>Cash on Delivery
+                  <input type="radio" name="payment-2">
+                </label>
+              </div>
+              <div class="form-field submit">
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Reset" class="btn btn-default">
+              </div>
+            </form>
+          </div>
         </div>
         <!-- footer-->
         <footer class="content-footer">

@@ -12,43 +12,30 @@ nav.sidebar
                 a(href="layouts.html")
                     span.fa.fa-align-left(title="Layouts")
                     span.text Layouts
-                a(href="#").toggle
-                    span.fa.fa-angle-double-left
-                ul.submenu
-                    li
-                        a(href="#")
-                            span.text Layouts 1
-                    li
-                        a(href="#")
-                            span.text Layouts 2
-                    li
-                        a(href="#")
-                            span.text Layouts 3
             li(class=page == "button" ? "active" : "")
                 a(href="button.html")
                     span.fa.fa-th(title="Buttons")
                     span.text Buttons
-                        span.new 5
             li(class=page == "navigation" ? "active" : "")
                 a(href="navigation.html")
-                    span.fa.fa-send(title="Navigation")
-                    span.text Navigation
-            li(class=page == "dropdown" ? "active" : "")
-                a(href="dropdown.html")
-                    span.fa.fa-chevron-circle-down(title="Dropdown")
-                    span.text Dropdown
+                    span.fa.fa-send(title="Linking")
+                    span.text Linking
                 a(href="#").toggle
                     span.fa.fa-angle-double-left
                 ul.submenu
                     li
-                        a(href="#")
-                            span.text Dropdown 1
+                        a(href="navigation.html#section-1")
+                            span.text Linking 1
                     li
-                        a(href="#")
-                            span.text Dropdown 2
+                        a(href="navigation.html#section-2")
+                            span.text Linking 2
                     li
-                        a(href="#")
-                            span.text Dropdown 3
+                        a(href="navigation.html#section-3")
+                            span.text Linking 3
+            li(class=page == "dropdown" ? "active" : "")
+                a(href="dropdown.html")
+                    span.fa.fa-chevron-circle-down(title="Dropdown")
+                    span.text Dropdown
             li(class=page == "forms" ? "active" : "")
                 a(href="forms.html")
                     span.fa.fa-file-text(title="Forms")
@@ -57,7 +44,6 @@ nav.sidebar
                 a(href="banner.html")
                     span.fa.fa-flag(title="Banner")
                     span.text Banner
-                        span.new-2 4
             li(class=page == "list" ? "active" : "")
                 a(href="list.html")
                     span.fa.fa-list-ul(title="List")
@@ -70,6 +56,7 @@ nav.sidebar
                 a(href="accordion.html")
                     span.fa.fa-bookmark(title="Accordion")
                     span.text Accordion
+                        span.new NEW
             li(class=page == "slider" ? "active" : "")
                 a(href="slider.html")
                     span.fa.fa-toggle-on(title="Slider")

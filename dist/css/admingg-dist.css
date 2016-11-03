@@ -117,22 +117,18 @@ hr {
   text-align: center;
   line-height: 40px;
 }
-.sidebar .menu ul li a .new,
-.sidebar .menu ul li a .new-2 {
+.sidebar .menu ul li a .new {
   display: inline-block;
   vertical-align: middle;
-  height: 17px;
+  height: 14px;
   padding: 0 8px;
   margin: 0 0 0 12px;
-  border-radius: 7px;
+  border-radius: 3px;
   color: #ffffff;
-  line-height: 17px;
-}
-.sidebar .menu ul li a .new {
+  line-height: 13px;
+  font-size: 10px;
+  font-weight: 700;
   background-color: #f8ac59;
-}
-.sidebar .menu ul li a .new-2 {
-  background-color: #00aeef;
 }
 .sidebar .menu ul li a .text {
   position: absolute;
@@ -846,5 +842,84 @@ hr {
   overflow-y: auto;
   padding-bottom: 0;
   border-bottom: 15px solid #ffffff;
+}
+.forms .form-section {
+  margin: 0 0 15px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 700;
+}
+.forms .form-field {
+  margin: 0 0 10px 0;
+}
+.forms .form-field + .form-section {
+  margin-top: 20px;
+}
+.forms .form-field label {
+  font-weight: 600;
+}
+.forms .form-field label * {
+  font-weight: 400;
+}
+.forms .form-field input[type="text"],
+.forms .form-field input[type="search"],
+.forms .form-field input[type="email"],
+.forms .form-field input[type="date"] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0 6px;
+  line-height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.forms .form-field.checkbox .description {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+.forms .form-field.checkbox label {
+  font-weight: 400;
+  margin: 0 0 0 20px;
+  position: relative;
+  white-space: nowrap;
+}
+.forms .form-field.checkbox label + label {
+  margin-left: 40px;
+}
+.forms .form-field.checkbox input[type="checkbox"] {
+  position: absolute;
+  left: -23px;
+}
+.forms .form-field.checkbox.block label {
+  display: block;
+}
+.forms .form-field.checkbox.block label + label {
+  margin-left: 20px;
+}
+.forms .form-field.radio .description {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+.forms .form-field.radio label {
+  font-weight: 400;
+  margin: 0 0 0 20px;
+  position: relative;
+  white-space: nowrap;
+}
+.forms .form-field.radio label + label {
+  margin-left: 40px;
+}
+.forms .form-field.radio input[type="radio"] {
+  position: absolute;
+  left: -23px;
+}
+.forms .form-field.radio.block label {
+  display: block;
+}
+.forms .form-field.radio.block label + label {
+  margin-left: 20px;
+}
+.forms .form-field.submit {
+  margin-top: 30px;
 }
 /* ==========  Responsive  ========== */
