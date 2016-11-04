@@ -57,7 +57,7 @@
                 }
             });
         });
-        if ($('.sidebar').css('left').replace('px','') == 0) {
+        if ($(document).width() <= 768) {
             $('.admingg').addClass('compact-menu');
         }
     }
