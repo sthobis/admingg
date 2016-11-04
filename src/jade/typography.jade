@@ -25,38 +25,52 @@ html
                 // main content
                 div(role="main")
                     .section-header
-                        h1.title Typography
-                        p.description Usage example of typography
+                        h1.title Fonts
+                        p.description Usage example of fonts
 
-                    .container
-                        h1 H1 TEXT ELEMENT
-                        h1.align-center H1 Text Element
-                        h1.align-right H1 Text Element
-                    
-                    .container
-                        h2 H2 TEXT ELEMENT
-                        h2.align-center H2 Text Element
-                        h2.align-right H2 Text Element
+                    .row
+                        .column-12
+                            .container
+                                h1 H1 Open Sans Font Size 2em Margin Bottom 20px
+                                h2 H2 Open Sans Font Size 1.5em Margin Bottom 15px
+                                h3 H3 Open Sans Font Size 1.17em Margin Bottom 10px
+                                h4 H4 Open Sans Font Size 1em Margin Bottom 10px
+                                h5 H5 Open Sans Font Size 0.83em Margin Bottom 5px
+                                hr
+                                p P Open Sans Font Size 1em Margin Bottom 10px Font Weight 400
+                                hr
+                                p
+                                    i P Open Sans Font Size 1em Margin Bottom 10px Italic Font Weight 400
+                                hr
+                                p.font-thin P Open Sans Font Size 1em Margin Bottom 10px Font Weight 300
+                                hr
+                                p.font-semibold P Open Sans Font Size 1em Margin Bottom 10px Font Weight 600
+                                hr
+                                p.font-bold P Open Sans Font Size 1em Margin Bottom 10px Font Weight 700
+                                hr
+                                p.align-left Text Aligned Left
+                                hr
+                                p.align-center Text Aligned Center
+                                hr
+                                p.align-right Text Aligned Right
 
-                    .container
-                        h3 H3 TEXT ELEMENT
-                        h3.align-center H3 Text Element
-                        h3.align-right H3 Text Element
+                    .section-header
+                        h1.title Icons
+                        p.description Usage example of icons
 
-                    .container
-                        h4 H4 TEXT ELEMENT
-                        h4.align-center H4 Text Element
-                        h4.align-right H4 Text Element
-
-                    .container
-                        h5 H5 TEXT ELEMENT
-                        h5.align-center H5 Text Element
-                        h5.align-right H5 Text Element
-
-                    .container
-                        p P TEXT ELEMENT
-                        p.align-center P Text Element
-                        p.align-right P Text Element
+                    .row
+                        .column-12
+                            .container
+                                h2
+                                    span.fa.fa-facebook-square
+                                    &nbsp;
+                                    span.fa.fa-twitter-square
+                                    &nbsp;
+                                    span.fa.fa-linkedin-square
+                                p adminGG used Font Awesome plugin for icons.
+                                p More customization options can be found on 
+                                    a(href="http://fontawesome.io/cheatsheet/") their site
+                                    | .
 
                 // footer
                 include ./include/footer.jade

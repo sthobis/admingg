@@ -116,6 +116,25 @@
             autoplay: true,
             autoplaySpeed: 2000
         });
+
+        $('.image-gallery-main').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.image-gallery-thumbnail',
+            fade: true,
+            dots: true
+        });
+
+        $('.image-gallery-thumbnail').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.image-gallery-main',
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000
+        });
     }
 
     /*

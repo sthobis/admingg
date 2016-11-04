@@ -28,41 +28,60 @@ html
                         h1.title Buttons
                         p.description Usage example of buttons
 
-                    h1 Default Button
-                    button.btn.btn-default Style 1
-                    button.btn.btn-info Style 2
-                    button.btn.btn-primary Style 3
-                    button.btn.btn-warning Style 4
-                    button.btn.btn-success Style 5
-                    button.btn.btn-error Style 6
-                    button.btn.btn-default.btn-block Full Block Style 1
-                    button.btn.btn-info.btn-block Full Block Style 2
-                    button.btn.btn-primary.btn-block Full Block Style 3
-                    button.btn.btn-warning.btn-block Full Block Style 4
-                    button.btn.btn-success.btn-block Full Block Style 5
-                    button.btn.btn-error.btn-block Full Block Style 6
-                    br
-                    h1 Link As Button
-                    a(href="#").btn.btn-default Style 1
-                    a(href="#").btn.btn-info Style 2
-                    a(href="#").btn.btn-primary Style 3
-                    a(href="#").btn.btn-warning Style 4
-                    a(href="#").btn.btn-success Style 5
-                    a(href="#").btn.btn-error Style 6
-                    a(href="#").btn.btn-default.btn-block Full Block Style 1
-                    a(href="#").btn.btn-info.btn-block Full Block Style 2
-                    a(href="#").btn.btn-primary.btn-block Full Block Style 3
-                    a(href="#").btn.btn-warning.btn-block Full Block Style 4
-                    a(href="#").btn.btn-success.btn-block Full Block Style 5
-                    a(href="#").btn.btn-error.btn-block Full Block Style 6
-                    br
-                    h1 Disabled Button
-                    button(disabled).btn.btn-default Style 1
-                    button(disabled).btn.btn-info Style 2
-                    button(disabled).btn.btn-primary Style 3
-                    button(disabled).btn.btn-warning Style 4
-                    button(disabled).btn.btn-success Style 5
-                    button(disabled).btn.btn-error Style 6
+                    .row
+                        .column-6
+                            .container
+                                h1 Default Button
+                                button.btn.btn-default Style 1
+                                button.btn.btn-info Style 2
+                                button.btn.btn-primary Style 3
+                                button.btn.btn-warning Style 4
+                                button.btn.btn-success Style 5
+                                button.btn.btn-error Style 6
+                                button.btn.btn-default.btn-block Full Block Style 1
+                                button.btn.btn-info.btn-block Full Block Style 2
+                                button.btn.btn-primary.btn-block Full Block Style 3
+                                button.btn.btn-warning.btn-block Full Block Style 4
+                                button.btn.btn-success.btn-block Full Block Style 5
+                                button.btn.btn-error.btn-block Full Block Style 6
+
+                        .column-6
+                            .container
+                                h1 Link As Button
+                                a(href="#").btn.btn-default Style 1
+                                a(href="#").btn.btn-info Style 2
+                                a(href="#").btn.btn-primary Style 3
+                                a(href="#").btn.btn-warning Style 4
+                                a(href="#").btn.btn-success Style 5
+                                a(href="#").btn.btn-error Style 6
+                                a(href="#").btn.btn-default.btn-block Full Block Style 1
+                                a(href="#").btn.btn-info.btn-block Full Block Style 2
+                                a(href="#").btn.btn-primary.btn-block Full Block Style 3
+                                a(href="#").btn.btn-warning.btn-block Full Block Style 4
+                                a(href="#").btn.btn-success.btn-block Full Block Style 5
+                                a(href="#").btn.btn-error.btn-block Full Block Style 6
+                    
+                    .row
+                        .column-12
+                            .container
+                                h1 Disabled Button
+                                button(disabled).btn.btn-default Style 1
+                                button(disabled).btn.btn-info Style 2
+                                button(disabled).btn.btn-primary Style 3
+                                button(disabled).btn.btn-warning Style 4
+                                button(disabled).btn.btn-success Style 5
+                                button(disabled).btn.btn-error Style 6
+
+                    .row
+                        .column-12
+                            .container
+                                h1 Border Button
+                                button.btn.btn-default.btn-border Style 1
+                                button.btn.btn-info.btn-border Style 2
+                                button.btn.btn-primary.btn-border Style 3
+                                button.btn.btn-warning.btn-border Style 4
+                                button.btn.btn-success.btn-border Style 5
+                                button.btn.btn-error.btn-border Style 6
 
                 // footer
                 include ./include/footer.jade

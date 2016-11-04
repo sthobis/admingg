@@ -42,7 +42,6 @@
         border-color: @color;
     }
 }
-
 .btn-disabled(@color, @borderColor, @textColor: #fff) {
     color: @textColor;
     background-color: lighten(@color, 8%);
@@ -52,4 +51,30 @@
         background-color: lighten(@color, 8%);
         border-color: @borderColor;
     }
+}
+.btn-border(@borderColor, @textColor: @borderColor) {
+    color: @textColor;
+    background-color: @colorWhite;
+    border-color: @borderColor;
+
+    &:hover {
+        color: darken(@textColor, 10%);
+        background-color: @colorWhite;
+        border-color: darken(@borderColor, 10%);
+    }
+}
+
+// layout mixins
+.generate-columns(@columns; @current: 1) when (@current =< @columns) {
+    .column-@{current} {
+        width: (@current/@columns*100%);
+        float: left;
+    }
+    .generate-columns(@columns, (@current + 1));
+}
+.generate-offset-columns(@columns; @current: 1) when (@current =< @columns) {
+    .column-offset-@{current} {
+        margin-left: (@current/@columns*100%);
+    }
+    .generate-offset-columns(@columns, (@current + 1));
 }

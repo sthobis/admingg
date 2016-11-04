@@ -5,64 +5,191 @@
 doctype html
 html
 
-	// head
-	head
-		include ./include/head.jade
-		// for demo purposes
-		link(rel="stylesheet" href="css/slider-demo.css")
+    // head
+    head
+        include ./include/head.jade
 
-	// body
-	body
+    // body
+    body
 
-		.admingg
+        .admingg
 
-			// sidebar
-			include ./include/sidebar.jade
+            // sidebar
+            include ./include/sidebar.jade
 
-			.content
+            .content
 
-				// header
-				include ./include/header.jade
+                // header
+                include ./include/header.jade
 
-				// main content
-				div(role="main")
-						.section-header
-								h1.title Dashboard Sample
-						.column-3
-								.container
-										h3 views
-								.container
-										h3 visits
-								.container
-										h3 most visited links
+                // main content
+                div(role="main")
 
-						.container
-								h2 Graph Slider
-										.slider-demo-4-1
-												.slide-demo
-														h2 unique visits
-												.slide-demo
-														h2 views graph
-												.slide-demo
-														h2 revenue graph
-										.slider-demo-4-2
-												.slide-demo
-														h2 unique visits
-												.slide-demo
-														h2 views graph
-												.slide-demo
-														h2 revenue graph
+                    .banner-wrap.overlay-orange
+                        img(src="img/harbour.jpeg" alt="Harbour")
+                        .text
+                            h1 adminGG Dashboard
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
 
-						.container
-								.panel-accordion.default-open
-										h3.accordion-title Traffic Details (accordion)
-										.accordion-content
-											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-										.accordion-content
-											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .section-header
+                        h1.title Posted Articles
+                        p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
 
-				// footer
-				include ./include/footer.jade
+                    section.row
+                        .column-4
+                            .container
+                                h3 Latest Articles
+                                hr
+                                .accordion.border
+                                    .accordion-title.default-open 
+                                        strong What?
+                                    .accordion-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet. Vestibulum a ante ut augue blandit iaculis eget semper magna.
+                                    .accordion-title 
+                                        strong Who?
+                                    .accordion-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet. Vestibulum a ante ut augue blandit iaculis eget semper magna.
+                                    .accordion-title 
+                                        strong When?
+                                    .accordion-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet. Vestibulum a ante ut augue blandit iaculis eget semper magna.
+                                    .accordion-title 
+                                        strong Where?
+                                    .accordion-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet. Vestibulum a ante ut augue blandit iaculis eget semper magna.
+                                    .accordion-title 
+                                        strong How?
+                                    .accordion-content Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet. Vestibulum a ante ut augue blandit iaculis eget semper magna.
+                                    
+                        .column-4
+                            .container
+                                .panel-accordion.default-open
+                                    h3.accordion-title Sticky Image
+                                    .accordion-content
+                                        img(src="img/laptop.jpg" alt="Laptop")
+                                        p
+                                            i Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
+                        .column-4
+                            .container
+                                .panel-accordion.default-open
+                                    h3.accordion-title Miscellaneous
+                                    .accordion-content
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
+                                        ul
+                                            li Lorem ipsum dolor sit amet 1
+                                            li Lorem ipsum dolor sit amet 2
+                                            li Lorem ipsum dolor sit amet 3
+                                            li Lorem ipsum dolor sit amet 4
+                                        hr
+                                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
+                                        ul.list-square
+                                            li Lorem ipsum dolor sit amet 1
+                                            li Lorem ipsum dolor sit amet 2
+                                            li Lorem ipsum dolor sit amet 3
+                                            li Lorem ipsum dolor sit amet 4
 
-		// script
-		include ./include/script.jade
+                    .section-header
+                        h1.title Contact Form
+                        p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
+
+                    section.row
+                        .column-6
+                            .container
+                                form.forms
+                                    h2 Contact Us
+                                    .form-section Personal Information
+                                    .form-field
+                                        label Name
+                                            input(type="text")
+                                    .form-field
+                                        label Email Address
+                                            input(type="text")
+                                    .form-field
+                                        label Message Type
+                                            select.dropdown-select
+                                                option Review
+                                                option Complaint
+                                    .form-field
+                                        label Tags
+                                            select(name="select1" multiple="multiple").dropdown-select
+                                                option Happy
+                                                option Sad
+                                                option Angry
+                                                option Deppresed
+                                                option Normal
+                                    .form-field
+                                        label Message
+                                            textarea
+                                    .form-section Terms and Conditions
+                                    .form-field.checkbox
+                                        p.description Please keep me updated by sending me these emails regulary :
+                                        label Account Information
+                                            input(type="checkbox" checked)
+                                        label Product News
+                                            input(type="checkbox")
+                                    .form-field.submit
+                                        input(type="submit" value="Submit").btn.btn-info
+                                        input(type="reset" value="Reset").btn.btn-default
+                        .column-6
+                            .container
+                                .panel-accordion.default-open
+                                    h3.accordion-title Form Options
+                                    .accordion-content
+                                        form.forms
+                                            .form-section Personal Information
+                                            .form-field.checkbox.block
+                                                p.description Check if you would like to include some options
+                                                label Include Insurance
+                                                    input(type="checkbox" checked)
+                                                label Bonus Pack
+                                                    input(type="checkbox")
+                                            .form-field.radio.block
+                                                p.description Payment methods
+                                                label Bank Transfer
+                                                    input(type="radio" name="radio-1")
+                                                label Credit Cards
+                                                    input(type="radio" name="radio-1")
+                                            .form-field.submit
+                                                input(type="submit" value="Update").btn.btn-warning
+                            .container
+                                .panel-accordion
+                                    h3.accordion-title Delete Form and Submissions
+                                    .accordion-content
+                                        form.forms
+                                            .form-section Delete Form
+                                            .form-field.radio.block
+                                                p.description Delete Form
+                                                label Yes
+                                                    input(type="radio" name="radio-2" checked)
+                                                label No
+                                                    input(type="radio" name="radio-2")
+                                            .form-field.radio.block
+                                                p.description Delete Submissions
+                                                label Yes
+                                                    input(type="radio" name="radio-3" checked)
+                                                label No
+                                                    input(type="radio" name="radio-3")
+                                            .form-field.submit
+                                                input(type="submit" value="Delete").btn.btn-danger
+
+                    .section-header
+                        h1.title User Submission Gallery
+                        p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod eros nunc, vitae tincidunt nibh pulvinar sit amet.
+
+                    section.row
+                        .column-8.column-offset-2
+                            .container
+                                .image-gallery-main
+                                    .image-slide(style="background-image:url('img/temp/slide-1.jpg'")
+                                    .image-slide(style="background-image:url('img/temp/slide-2.jpg'")
+                                    .image-slide(style="background-image:url('img/temp/slide-3.jpg'")
+                                    .image-slide(style="background-image:url('img/temp/slide-4.jpg'")
+                                    .image-slide(style="background-image:url('img/temp/slide-5.jpg'")
+                                .image-gallery-thumbnail
+                                    .thumbnail-slide(style="background-image:url('img/temp/slide-1.jpg'")
+                                    .thumbnail-slide(style="background-image:url('img/temp/slide-2.jpg'")
+                                    .thumbnail-slide(style="background-image:url('img/temp/slide-3.jpg'")
+                                    .thumbnail-slide(style="background-image:url('img/temp/slide-4.jpg'")
+                                    .thumbnail-slide(style="background-image:url('img/temp/slide-5.jpg'")
+
+                // footer
+                include ./include/footer.jade
+
+        // script
+        include ./include/script.jade

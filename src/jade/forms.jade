@@ -28,56 +28,61 @@ html
                         h1.title Forms
                         p.description Usage example of forms
 
-                    .container
-                        form.forms
-                            h2 Purchasing Order
-                            .form-section Personal Information
-                            .form-field
-                                label Full Name
-                                    input(type="text")
-                            .form-field
-                                label Address
-                                    input(type="text")
-                            .form-field
-                                label Birthdate
-                                    input(type="text")
-                            .form-field
-                                label Gender
-                                    select.dropdown-select
-                                        option Male
-                                        option Female
-                            .form-section Order Information
-                            .form-field.checkbox
-                                p.description Check if you would like to include some options
-                                label Include Insurance
-                                    input(type="checkbox" checked)
-                                label Bonus Pack
-                                    input(type="checkbox")
-                            .form-field.checkbox.block
-                                p.description Check if you would like to include some options
-                                label Include Insurance
-                                    input(type="checkbox" checked)
-                                label Bonus Pack
-                                    input(type="checkbox")
-                            .form-field.radio
-                                p.description Payment methods
-                                label Credit Card
-                                    input(type="radio" name="payment-1" checked)
-                                label Bank Transfer
-                                    input(type="radio" name="payment-1")
-                                label Cash on Delivery
-                                    input(type="radio" name="payment-1")
-                            .form-field.radio.block
-                                p.description Payment methods
-                                label Credit Card
-                                    input(type="radio" name="payment-2" checked)
-                                label Bank Transfer
-                                    input(type="radio" name="payment-2")
-                                label Cash on Delivery
-                                    input(type="radio" name="payment-2")
-                            .form-field.submit
-                                input(type="submit" value="Submit").btn.btn-success
-                                input(type="reset" value="Reset").btn.btn-default
+                    .row
+                        .column-12
+                            .container
+                                form.forms
+                                    h2 Purchasing Order
+                                    .form-section Personal Information
+                                    .form-field
+                                        label Full Name
+                                            input(type="text")
+                                    .form-field
+                                        label Address
+                                            input(type="text")
+                                    .form-field
+                                        label Birthdate
+                                            input(type="text")
+                                    .form-field
+                                        label Gender
+                                            select.dropdown-select
+                                                option Male
+                                                option Female
+                                    .form-field
+                                        label Message
+                                            textarea
+                                    .form-section Order Information
+                                    .form-field.checkbox
+                                        p.description Check if you would like to include some options
+                                        label Include Insurance
+                                            input(type="checkbox" checked)
+                                        label Bonus Pack
+                                            input(type="checkbox")
+                                    .form-field.checkbox.block
+                                        p.description Check if you would like to include some options
+                                        label Include Insurance
+                                            input(type="checkbox" checked)
+                                        label Bonus Pack
+                                            input(type="checkbox")
+                                    .form-field.radio
+                                        p.description Payment methods
+                                        label Credit Card
+                                            input(type="radio" name="payment-1" checked)
+                                        label Bank Transfer
+                                            input(type="radio" name="payment-1")
+                                        label Cash on Delivery
+                                            input(type="radio" name="payment-1")
+                                    .form-field.radio.block
+                                        p.description Payment methods
+                                        label Credit Card
+                                            input(type="radio" name="payment-2" checked)
+                                        label Bank Transfer
+                                            input(type="radio" name="payment-2")
+                                        label Cash on Delivery
+                                            input(type="radio" name="payment-2")
+                                    .form-field.submit
+                                        input(type="submit" value="Submit").btn.btn-success
+                                        input(type="reset" value="Reset").btn.btn-default
 
 
                 // footer

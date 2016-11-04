@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="images/x-icon" href="img/favicon.ico">
     <!-- fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
     <!-- font-awesome-->
     <link rel="stylesheet" href="js/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- slick-->
@@ -69,81 +69,90 @@
             <h1 class="title">Forms</h1>
             <p class="description">Usage example of forms</p>
           </div>
-          <div class="container">
-            <form class="forms">
-              <h2>Purchasing Order</h2>
-              <div class="form-section">Personal Information</div>
-              <div class="form-field">
-                <label>Full Name
-                  <input type="text">
-                </label>
+          <div class="row">
+            <div class="column-12">
+              <div class="container">
+                <form class="forms">
+                  <h2>Purchasing Order</h2>
+                  <div class="form-section">Personal Information</div>
+                  <div class="form-field">
+                    <label>Full Name
+                      <input type="text">
+                    </label>
+                  </div>
+                  <div class="form-field">
+                    <label>Address
+                      <input type="text">
+                    </label>
+                  </div>
+                  <div class="form-field">
+                    <label>Birthdate
+                      <input type="text">
+                    </label>
+                  </div>
+                  <div class="form-field">
+                    <label>Gender
+                      <select class="dropdown-select">
+                        <option>Male</option>
+                        <option>Female</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="form-field">
+                    <label>Message
+                      <textarea></textarea>
+                    </label>
+                  </div>
+                  <div class="form-section">Order Information</div>
+                  <div class="form-field checkbox">
+                    <p class="description">Check if you would like to include some options</p>
+                    <label>Include Insurance
+                      <input type="checkbox" checked>
+                    </label>
+                    <label>Bonus Pack
+                      <input type="checkbox">
+                    </label>
+                  </div>
+                  <div class="form-field checkbox block">
+                    <p class="description">Check if you would like to include some options</p>
+                    <label>Include Insurance
+                      <input type="checkbox" checked>
+                    </label>
+                    <label>Bonus Pack
+                      <input type="checkbox">
+                    </label>
+                  </div>
+                  <div class="form-field radio">
+                    <p class="description">Payment methods</p>
+                    <label>Credit Card
+                      <input type="radio" name="payment-1" checked>
+                    </label>
+                    <label>Bank Transfer
+                      <input type="radio" name="payment-1">
+                    </label>
+                    <label>Cash on Delivery
+                      <input type="radio" name="payment-1">
+                    </label>
+                  </div>
+                  <div class="form-field radio block">
+                    <p class="description">Payment methods</p>
+                    <label>Credit Card
+                      <input type="radio" name="payment-2" checked>
+                    </label>
+                    <label>Bank Transfer
+                      <input type="radio" name="payment-2">
+                    </label>
+                    <label>Cash on Delivery
+                      <input type="radio" name="payment-2">
+                    </label>
+                  </div>
+                  <div class="form-field submit">
+                    <input type="submit" value="Submit" class="btn btn-success">
+                    <input type="reset" value="Reset" class="btn btn-default">
+                  </div>
+                </form>
               </div>
-              <div class="form-field">
-                <label>Address
-                  <input type="text">
-                </label>
-              </div>
-              <div class="form-field">
-                <label>Birthdate
-                  <input type="text">
-                </label>
-              </div>
-              <div class="form-field">
-                <label>Gender
-                  <select class="dropdown-select">
-                    <option>Male</option>
-                    <option>Female</option>
-                  </select>
-                </label>
-              </div>
-              <div class="form-section">Order Information</div>
-              <div class="form-field checkbox">
-                <p class="description">Check if you would like to include some options</p>
-                <label>Include Insurance
-                  <input type="checkbox" checked>
-                </label>
-                <label>Bonus Pack
-                  <input type="checkbox">
-                </label>
-              </div>
-              <div class="form-field checkbox block">
-                <p class="description">Check if you would like to include some options</p>
-                <label>Include Insurance
-                  <input type="checkbox" checked>
-                </label>
-                <label>Bonus Pack
-                  <input type="checkbox">
-                </label>
-              </div>
-              <div class="form-field radio">
-                <p class="description">Payment methods</p>
-                <label>Credit Card
-                  <input type="radio" name="payment-1" checked>
-                </label>
-                <label>Bank Transfer
-                  <input type="radio" name="payment-1">
-                </label>
-                <label>Cash on Delivery
-                  <input type="radio" name="payment-1">
-                </label>
-              </div>
-              <div class="form-field radio block">
-                <p class="description">Payment methods</p>
-                <label>Credit Card
-                  <input type="radio" name="payment-2" checked>
-                </label>
-                <label>Bank Transfer
-                  <input type="radio" name="payment-2">
-                </label>
-                <label>Cash on Delivery
-                  <input type="radio" name="payment-2">
-                </label>
-              </div>
-              <div class="form-field submit">
-                <input type="submit" value="Submit" class="btn btn-success">
-                <input type="reset" value="Reset" class="btn btn-default">
-              </div>
-            </form>
+            </div>
           </div>
         </div>
         <!-- footer-->
