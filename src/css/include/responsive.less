@@ -2,25 +2,221 @@
 @import "./variables";
 
 /* ==========  Responsive  ========== */
+/* =========  Desktop-First  ======== */
 
 // Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
+    .content {
+
+        .content-header {
+
+            .welcome {
+                display: none;
+            }
+        }
+    }
+
+    .banner-wrap {
+
+        .text {
+            font-size: 14px;
+
+            .title {
+                margin-bottom: 10px;
+            }
+        }
+    }
 }
 
 // Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
 
+    .row {
+
+        .column-1,
+        .column-2,
+        .column-3,
+        .column-4,
+        .column-5,
+        .column-6,
+        .column-7,
+        .column-8,
+        .column-9,
+        .column-10,
+        .column-11 {
+            width: 100%;
+            float: none;
+            margin-left: 0;
+        }
+    }
+
+    .content {
+
+        .content-header {
+
+            .sticky-left {
+                width: 66%;
+            }
+
+            .sticky-right {
+                width: 33%;
+            }
+
+            .searchbar {
+                width: 260px;
+                width: ~"calc(100% - 60px)";
+
+                input {
+                    width: 200px;
+                    width: ~"calc(100% - 50px)";
+                }
+            }
+        }
+    }
+
+    .banner-wrap {
+
+        .text {
+            font-size: 10px;
+
+            .title {
+                margin-bottom: 5px;
+            }
+
+            .description {
+                font-size: 1.25em;
+            }
+        }
+    }
 }
 
 // Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+
+    .sidebar {
+        left: 0;
+        width: 240px;
+
+        .profile {
+            background-size: auto;
+            background-position: top 20px center;
+            height: 140px;
+            padding: 70px 0 0 0;
+
+            * {
+                display: block;
+            }
+        }
+
+        .menu {
+
+            ul {
+
+                li {
+
+                    a {
+                        padding: 0;
+                        text-align: left;
+                        position: relative;
+
+                        .fa {
+                            margin: 0;
+                        }
+
+                        .text {
+                            display: block;
+                        }
+
+                        &.toggle {
+                            display: block;
+                            position: absolute;
+                        }
+                    }
+
+                    &.open {
+
+                        .submenu {
+                            display: initial;
+                            position: static;
+                            height: auto;
+                            width: auto;
+
+                            li {
+
+                                &:hover {
+
+                                    a {
+                                        background-color: darken(@colorDarkBlue, 5%);
+                                    }
+                                }
+
+                                a {
+                                    background-color: @colorDarkBlue;
+                                    padding: 0 10px;
+                                    width: auto;
+                                    text-align: left;
+
+                                    .text {
+                                        position: absolute;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        margin-left: 240px;
+        width: 100%;
+    }
+
+    .compact-menu {
+
+        .sidebar {
+            left: -240px;
+        }
+
+        .content {
+            margin-left: 0;
+        }
+    }
+
 
 }
 
 // Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
 
+    .content {
+
+        .content-header {
+
+            .searchbar {
+                display: none;
+            }
+
+            .sticky-left {
+                width: 30px;
+            }
+
+            .sticky-right {
+                width: 250px;
+                width: ~"calc(100% - 30px)";
+            }
+        }
+    }
+
+    .banner-wrap {
+
+        &::before {
+            padding-top: 50%;
+        }
+    }
 }
 
 // Custom, iPhone Retina */ 

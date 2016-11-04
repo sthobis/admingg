@@ -155,16 +155,16 @@ img {
   text-align: center;
   line-height: 40px;
 }
+.sidebar .menu ul li a.toggle.rotate .fa {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
 .sidebar .menu ul li a.toggle .fa {
   margin: 0;
   -webkit-transition: all .3s;
           transition: all .3s;
   width: 40px;
-}
-.sidebar .menu ul li.open .toggle .fa {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
 }
 .sidebar .menu ul.submenu {
   display: none;
@@ -235,7 +235,7 @@ img {
   display: none;
 }
 .compact-menu .sidebar .menu ul li.open .submenu {
-  display: block !important;
+  display: block;
   position: absolute;
   top: 0;
   left: 100%;
@@ -735,8 +735,13 @@ img {
   background-repeat: no-repeat;
   overflow: hidden;
   margin: 0 0 20px 0;
-  height: 400px;
+  height: auto;
   position: relative;
+}
+.banner-wrap::before {
+  content: '';
+  display: block;
+  padding-top: 25%;
 }
 .banner-wrap.overlay-default::after {
   content: '';
@@ -801,6 +806,12 @@ img {
   text-align: center;
   color: #ffffff;
   font-size: 20px;
+}
+.banner-wrap .text .title {
+  margin-bottom: 20px;
+}
+.banner-wrap .text * {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
 }
 .dropdown-select {
   display: block;
@@ -1095,3 +1106,134 @@ img {
   padding-top: 62.5%;
 }
 /* ==========  Responsive  ========== */
+/* =========  Desktop-First  ======== */
+@media only screen and (max-width: 1200px) {
+  .content .content-header .welcome {
+    display: none;
+  }
+  .banner-wrap .text {
+    font-size: 14px;
+  }
+  .banner-wrap .text .title {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .row .column-1,
+  .row .column-2,
+  .row .column-3,
+  .row .column-4,
+  .row .column-5,
+  .row .column-6,
+  .row .column-7,
+  .row .column-8,
+  .row .column-9,
+  .row .column-10,
+  .row .column-11 {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+  .content .content-header .sticky-left {
+    width: 66%;
+  }
+  .content .content-header .sticky-right {
+    width: 33%;
+  }
+  .content .content-header .searchbar {
+    width: 260px;
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+  }
+  .content .content-header .searchbar input {
+    width: 200px;
+    width: -webkit-calc(100% - 50px);
+    width: calc(100% - 50px);
+  }
+  .banner-wrap .text {
+    font-size: 10px;
+  }
+  .banner-wrap .text .title {
+    margin-bottom: 5px;
+  }
+  .banner-wrap .text .description {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    left: 0;
+    width: 240px;
+  }
+  .sidebar .profile {
+    background-size: auto;
+    background-position: top 20px center;
+    height: 140px;
+    padding: 70px 0 0 0;
+  }
+  .sidebar .profile * {
+    display: block;
+  }
+  .sidebar .menu ul li a {
+    padding: 0;
+    text-align: left;
+    position: relative;
+  }
+  .sidebar .menu ul li a .fa {
+    margin: 0;
+  }
+  .sidebar .menu ul li a .text {
+    display: block;
+  }
+  .sidebar .menu ul li a.toggle {
+    display: block;
+    position: absolute;
+  }
+  .sidebar .menu ul li.open .submenu {
+    display: initial;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+  .sidebar .menu ul li.open .submenu li:hover a {
+    background-color: #125497;
+  }
+  .sidebar .menu ul li.open .submenu li a {
+    background-color: #1561ae;
+    padding: 0 10px;
+    width: auto;
+    text-align: left;
+  }
+  .sidebar .menu ul li.open .submenu li a .text {
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .content {
+    margin-left: 240px;
+    width: 100%;
+  }
+  .compact-menu .sidebar {
+    left: -240px;
+  }
+  .compact-menu .content {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .content .content-header .searchbar {
+    display: none;
+  }
+  .content .content-header .sticky-left {
+    width: 30px;
+  }
+  .content .content-header .sticky-right {
+    width: 250px;
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+  .banner-wrap::before {
+    padding-top: 50%;
+  }
+}

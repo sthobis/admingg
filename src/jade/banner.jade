@@ -26,34 +26,24 @@ html
                 div(role="main")
                     .section-header
                         h1.title Banner
-                        h3.description Using Image
-
-                    .banner-wrap
-                        img(src="img/harbour.jpg" alt="Harbour")
-
-                    .section-header
-                        h3.description Using Background Property
+                        h3.description Default Banner
 
                     .banner-wrap(style="background-image:url('img/harbour.jpg')")
 
                     .section-header
                         h3.description With Overlay
 
-                    .banner-wrap.overlay-default
-                        img(src="img/harbour.jpg" alt="Harbour")
-                    .banner-wrap.overlay-blue
-                        img(src="img/harbour.jpg" alt="Harbour")
-                    .banner-wrap.overlay-orange
-                        img(src="img/harbour.jpg" alt="Harbour")
+                    .banner-wrap.overlay-default(style="background-image:url('img/harbour.jpg')")
+                    .banner-wrap.overlay-blue(style="background-image:url('img/harbour.jpg')")
+                    .banner-wrap.overlay-orange(style="background-image:url('img/harbour.jpg')")
 
                     .section-header
                         h3.description With Title and Description
 
-                    .banner-wrap.overlay-default
-                        img(src="img/harbour.jpg" alt="Harbour")
+                    .banner-wrap.overlay-default(style="background-image:url('img/harbour.jpg')")
                         .text
-                            h1 Insert Title Here
-                            p Insert Detailed and Self-Explanatory Description Here           
+                            h1.title Insert Title Here
+                            p.description Insert Detailed and Self-Explanatory Description Here           
 
                 // footer
                 include ./include/footer.jade

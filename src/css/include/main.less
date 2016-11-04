@@ -118,21 +118,17 @@
                         text-align: center;
                         line-height: 40px;
 
+                        &.rotate {
+
+                            .fa {
+                                transform: rotate(-90deg);    
+                            }
+                        }
+
                         .fa {
                             margin: 0;
                             transition: all .3s;
                             width: 40px;
-                        }
-                    }
-                }
-
-                // submenu opened (toggle clicked)
-                &.open {
-
-                    .toggle {
-
-                        .fa {
-                            transform: rotate(-90deg);
                         }
                     }
                 }
@@ -233,7 +229,7 @@
                 &.open {
 
                     .submenu {
-                        display: block !important;
+                        display: block;
                         position: absolute;
                         top: 0;
                         left: 100%;
@@ -607,8 +603,14 @@
     background-repeat: no-repeat;
     overflow: hidden;
     margin: 0 0 20px 0;
-    height: 400px;
+    height: auto;
     position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-top: 25%;
+    }
 
     &.overlay-default {
 
@@ -682,6 +684,14 @@
         text-align: center;
         color: @colorWhite;
         font-size: 20px;
+
+        .title {
+            margin-bottom: 20px;
+        }
+
+        * {
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.75);
+        }
     }
 }
 

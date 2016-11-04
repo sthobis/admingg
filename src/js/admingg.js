@@ -18,8 +18,13 @@
         // normal mode submenu toggle handler
         $('.sidebar .menu .toggle').on('click', function(e) {
             e.preventDefault();
+            if ($(this).parent().hasClass('open')) {
+                $(this).siblings('.submenu').hide();
+            } else {
+                $(this).siblings('.submenu').show();
+            }
+            $(this).toggleClass('rotate');
             $(this).parent().toggleClass('open');
-            $(this).siblings('.submenu').stop().slideToggle();
         });
         // compact menu toggle handler
         $('.menu-toggle').on('click', function(e) {
@@ -27,8 +32,9 @@
             $('.admingg').toggleClass('compact-menu');
             // close opened menu to preserve style consistency
             $('.submenu').each(function() {
+                $(this).siblings('.toggle').removeClass('rotate');
                 $(this).parent().removeClass('open');
-                $(this).slideUp();
+                $(this).hide();
             });
         });
         // compact mode submenu toggle handler
@@ -38,19 +44,26 @@
                 // on hover show submenu
                 if ($('.admingg').hasClass('compact-menu')) {
                     $(this).addClass('open');
+                    var $this = $(this);
+                    $this.find('ul.submenu').show();
                 }
             })
             .on('mouseleave', function() {
                 // on mouseleave hide submenu
                 if ($('.admingg').hasClass('compact-menu')) {
                     $(this).removeClass('open');  
+                    var $this = $(this);
+                    $this.find('ul.submenu').hide();
                 }
             });
         });
+        if ($('.sidebar').css('left').replace('px','') == 0) {
+            $('.admingg').addClass('compact-menu');
+        }
     }
 
     /*
-     * sliders initialization
+     * sliders initliaization
      */
     function initSliderDemo() {
 
