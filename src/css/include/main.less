@@ -54,7 +54,7 @@
                 position: relative;
 
                 &:hover {
-                    
+
                     & > a {
                         background-color: darken(@colorDarkBlue, 5%);
                         color: @colorWhite;
@@ -404,6 +404,13 @@
     padding: 15px;
     margin: 0 0 15px 0;
     position: relative;
+
+    .container.section {
+      margin: 0 0 15px 0;
+          padding: 0 0 5px 0;
+          border-bottom: 1px solid #aaa;
+          font-weight: @bold;
+    }
 }
 
 .column-2 {
@@ -431,6 +438,15 @@
 
     .container {
         width: ~"calc((100% / 3) - (40px / 3))";
+        float: left;
+
+        & + .container {
+            margin-left: 20px;
+        }
+    }
+
+    .container.half {
+        width: ~"calc((100% / 6) - (40px / 6))";
         float: left;
 
         & + .container {
@@ -752,7 +768,7 @@
     }
 
     ul {
-        list-style-type: none;        
+        list-style-type: none;
     }
 }
 

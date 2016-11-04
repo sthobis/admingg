@@ -82,7 +82,7 @@ hr {
   background-repeat: no-repeat;
   height: 140px;
   padding: 70px 0 0 0;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 .sidebar .profile h1 {
@@ -97,11 +97,11 @@ hr {
 }
 .sidebar .menu ul li:hover > a {
   background-color: #125497;
-  color: #ffffff;
+  color: #fff;
 }
 .sidebar .menu ul li.active > a {
   background-color: #125497;
-  color: #ffffff;
+  color: #fff;
 }
 .sidebar .menu ul li a {
   position: relative;
@@ -124,7 +124,7 @@ hr {
   padding: 0 8px;
   margin: 0 0 0 12px;
   border-radius: 3px;
-  color: #ffffff;
+  color: #fff;
   line-height: 13px;
   font-size: 10px;
   font-weight: 700;
@@ -153,8 +153,7 @@ hr {
 }
 .sidebar .menu ul li a.toggle .fa {
   margin: 0;
-  -webkit-transition: all .3s;
-          transition: all .3s;
+  transition: all .3s;
   width: 40px;
 }
 .sidebar .menu ul li.open .toggle .fa {
@@ -172,7 +171,7 @@ hr {
   position: relative;
   padding: 20px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   font-size: 11px;
 }
 .sidebar .footer::before {
@@ -182,7 +181,7 @@ hr {
   top: 10px;
   left: 30%;
   right: 30%;
-  border-bottom: 1px dashed #ffffff;
+  border-bottom: 1px dashed #fff;
   opacity: .5;
 }
 .compact-menu .sidebar {
@@ -291,7 +290,7 @@ hr {
   margin: 5px 0;
   text-align: center;
   line-height: 30px;
-  color: #ffffff;
+  color: #fff;
 }
 .content .content-header .menu-toggle:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -360,7 +359,7 @@ hr {
   margin-left: 50px;
 }
 .section-header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 20px;
   margin: 0 -20px 15px -20px;
   border-bottom: 1px solid #e7eaec;
@@ -374,10 +373,16 @@ hr {
   margin: 5px 0 0 0;
 }
 .container {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 15px;
   margin: 0 0 15px 0;
   position: relative;
+}
+.container .container.section {
+  margin: 0 0 15px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: 700;
 }
 .column-2::after {
   content: '';
@@ -385,7 +390,6 @@ hr {
   clear: both;
 }
 .column-2 .container {
-  width: -webkit-calc((100% / 2) - (20px / 2));
   width: calc((100% / 2) - (20px / 2));
   float: left;
 }
@@ -401,11 +405,17 @@ hr {
   clear: both;
 }
 .column-3 .container {
-  width: -webkit-calc((100% / 3) - (40px / 3));
   width: calc((100% / 3) - (40px / 3));
   float: left;
 }
 .column-3 .container + .container {
+  margin-left: 20px;
+}
+.column-3 .container.half {
+  width: calc((100% / 6) - (40px / 6));
+  float: left;
+}
+.column-3 .container.half + .container {
   margin-left: 20px;
 }
 .column-3.float-right .container {
@@ -417,7 +427,6 @@ hr {
   clear: both;
 }
 .column-4 .container {
-  width: -webkit-calc((100% / 4) - (60px / 4));
   width: calc((100% / 4) - (60px / 4));
   float: left;
 }
@@ -436,7 +445,7 @@ hr {
 .btn {
   display: inline-block;
   padding: 6px 12px;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #676a6c;
   border: 1px solid #e7eaec;
   border-radius: 3px;
@@ -470,7 +479,7 @@ hr {
   margin: 10px 0;
 }
 .btn.btn-primary {
-  color: #ffffff;
+  color: #fff;
   background-color: #1561ae;
   border-color: #1561ae;
 }
@@ -479,7 +488,7 @@ hr {
   border-color: #1561ae;
 }
 .btn.btn-success {
-  color: #ffffff;
+  color: #fff;
   background-color: #1ab394;
   border-color: #1ab394;
 }
@@ -488,7 +497,7 @@ hr {
   border-color: #1ab394;
 }
 .btn.btn-info {
-  color: #ffffff;
+  color: #fff;
   background-color: #00aeef;
   border-color: #00aeef;
 }
@@ -497,7 +506,7 @@ hr {
   border-color: #00aeef;
 }
 .btn.btn-warning {
-  color: #ffffff;
+  color: #fff;
   background-color: #f8ac59;
   border-color: #f8ac59;
 }
@@ -507,7 +516,7 @@ hr {
 }
 .btn.btn-error,
 .btn.btn-danger {
-  color: #ffffff;
+  color: #fff;
   background-color: #ed5565;
   border-color: #ed5565;
 }
@@ -529,7 +538,7 @@ hr {
   border-color: #e7eaec;
 }
 .btn[disabled].btn-primary {
-  color: #ffffff;
+  color: #fff;
   background-color: #1975d2;
   border-color: #1561ae;
 }
@@ -538,7 +547,7 @@ hr {
   border-color: #1561ae;
 }
 .btn[disabled].btn-success {
-  color: #ffffff;
+  color: #fff;
   background-color: #1fd7b1;
   border-color: #1ab394;
 }
@@ -547,7 +556,7 @@ hr {
   border-color: #1ab394;
 }
 .btn[disabled].btn-info {
-  color: #ffffff;
+  color: #fff;
   background-color: #19c0ff;
   border-color: #00aeef;
 }
@@ -556,7 +565,7 @@ hr {
   border-color: #00aeef;
 }
 .btn[disabled].btn-warning {
-  color: #ffffff;
+  color: #fff;
   background-color: #fac080;
   border-color: #f8ac59;
 }
@@ -566,7 +575,7 @@ hr {
 }
 .btn[disabled].btn-error,
 .btn[disabled].btn-danger {
-  color: #ffffff;
+  color: #fff;
   background-color: #f17a86;
   border-color: #ed5565;
 }
@@ -592,7 +601,7 @@ hr {
   height: 12px;
 }
 .slick-dots li button {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 12px;
   height: 12px;
   border: 1px solid #00aeef;
@@ -674,7 +683,7 @@ hr {
           transform: translateY(-50%);
   z-index: 10;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
 }
 .dropdown-select {
@@ -697,7 +706,7 @@ hr {
   outline: none;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #dedede;
   border-radius: 3px;
 }
@@ -777,8 +786,7 @@ hr {
   margin: 0;
 }
 .accordion .accordion-title .fa {
-  -webkit-transition: all .3s;
-          transition: all .3s;
+  transition: all .3s;
   margin: 0 5px 0 0;
 }
 .accordion .accordion-title.active .fa {
@@ -826,8 +834,7 @@ hr {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: all .3s;
-          transition: all .3s;
+  transition: all .3s;
 }
 .panel-accordion .accordion-title.active .fa {
   -webkit-transform: translateY(-50%) rotateX(180deg);
@@ -841,7 +848,7 @@ hr {
   max-height: 250px;
   overflow-y: auto;
   padding-bottom: 0;
-  border-bottom: 15px solid #ffffff;
+  border-bottom: 15px solid #fff;
 }
 .forms .form-section {
   margin: 0 0 15px 0;

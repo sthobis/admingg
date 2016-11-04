@@ -8,6 +8,8 @@ html
 	// head
 	head
 		include ./include/head.jade
+		// for demo purposes
+		link(rel="stylesheet" href="css/slider-demo.css")
 
 	// body
 	body
@@ -24,7 +26,40 @@ html
 
 				// main content
 				div(role="main")
-					h1 Dashboard Content
+						.section-header
+								h1.title Dashboard Sample
+						.column-3
+								.container
+										h3 views
+								.container
+										h3 visits
+								.container
+										h3 most visited links
+
+						.container
+								h2 Graph Slider
+										.slider-demo-4-1
+												.slide-demo
+														h2 unique visits
+												.slide-demo
+														h2 views graph
+												.slide-demo
+														h2 revenue graph
+										.slider-demo-4-2
+												.slide-demo
+														h2 unique visits
+												.slide-demo
+														h2 views graph
+												.slide-demo
+														h2 revenue graph
+
+						.container
+								.panel-accordion.default-open
+										h3.accordion-title Traffic Details (accordion)
+										.accordion-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										.accordion-content
+											p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 				// footer
 				include ./include/footer.jade
